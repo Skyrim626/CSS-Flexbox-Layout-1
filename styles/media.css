@@ -1,0 +1,316 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box  {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container header, main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container header .box {
+    height: 100%;
+    background-color: aquamarine;
+}
+
+.container header .box.box2 {
+    margin: -5px 10px;
+}
+
+
+
+
+
+/* Main */
+/* .container main {
+    margin-top: 20px;
+} */
+
+.container main .box-container.container1 {
+    display: none;
+}
+
+.container main .box-container.container2 {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.container main .box-container.container2 .box {
+    height: 70vh;
+    color: whitesmoke;
+    background: #101010;
+}
+
+.container main .box-container.container2 .box.box1 {
+    flex-grow: 12;
+    margin-right: 0;
+}
+
+.container main .box-container.container2 .box.box2 {
+    flex-grow: 0;
+    background: red;
+}
+
+
+footer {
+     background: coral;
+     color: burlywood;
+}
+
+
+
+@media only screen and (max-width: 300px) {
+
+    .container main .box-container.container2 .box.box1 {
+        margin: 10px;
+    }
+
+    .container main .box-container.container2 .box.box2 {
+        display: none;
+    }
+
+    .container header .box.box2 {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .box  {
+        margin: 10px;
+        border: 1px solid black;
+        padding: 20px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background: khaki;
+    }
+
+    .container header {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .container header .box {
+        height: 90px;
+        background: purple;
+    }
+
+    .container header .box.box2 {
+       margin: 10px;
+    }
+
+    .container header .box.box1 {
+        flex-grow: 7;
+    }
+
+    .container header .box.box2 {
+        flex-grow: 1;
+    }
+
+    .container main {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .container main .box-container {
+        display: flex;
+    }
+
+    .container main .box-container.container1{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    /* Flex Grow */
+    .container main .box-container.container1 .box {
+        flex-grow: 1;
+        height: 100%;
+        /* height: 20vh; */
+    }
+
+    .container main .box-container.container2 {
+        flex-grow: 6;
+    }
+
+    .container main .box-container.container2 .box {
+        height: 70vh;
+        /* width: 100%; */
+        /* flex-grow: 6; */
+        /* width: 700px; */
+    }
+
+    .container main .box-container.container2 .box.box1 {
+        flex-grow: 5.2;
+    }
+
+    .container main .box-container.container2 .box.box2 {
+        flex-grow: 1;
+        background: black;
+    }
+
+}
+
+
+
+
+
+
+
+/*
+
+
+Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+
+    .box {
+        border: 1px solid yellow;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container header .box {
+        background: green;
+    }
+
+    .container main .box-container.container1 .box {
+        background: papayawhip;
+    }
+
+    .container main .box-container.container2 .box {
+        background-color: darkblue;
+    }
+
+    footer {
+        background: gold;
+    }
+
+}
+
+Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {
+
+    .box {
+        border: 1px solid yellow;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container header .box {
+        background: navy;
+    }
+
+    .container main .box-container.container1 .box {
+        background: salmon;
+    }
+
+    .container main .box-container.container2 .box {
+        background-color: aqua;
+    }
+
+    footer {
+        background: orchid;
+    }
+
+}
+
+Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {
+
+    .box {
+        border: 1px solid red;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container header .box {
+        background: rebeccapurple;
+    }
+
+    .container main .box-container.container1 .box {
+        background: cadetblue;
+    }
+
+    .container main .box-container.container2 .box {
+        background-color: indianred;
+    }
+
+    footer {
+        background: yellowgreen;
+    }
+
+}
+
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {
+
+    .box {
+        border: 1px solid hotpink;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container header .box {
+        background: teal;
+    }
+
+    .container main .box-container.container1 .box {
+        background: lawngreen;
+    }
+
+    .container main .box-container.container2 .box {
+        background-color: fuchsia;
+    }
+
+    footer {
+        background: maroon;
+    }
+
+}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {
+
+    .box {
+        border: 1px solid khaki;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container header .box {
+        background: violet;
+    }
+
+    .container main .box-container.container1 .box {
+        background: lightgoldenrodyellow;
+    }
+
+    .container main .box-container.container2 .box {
+        background-color: goldenrod;
+    }
+
+    footer {
+        background: slategrey;
+    }
+
+}
+
+
+*/
